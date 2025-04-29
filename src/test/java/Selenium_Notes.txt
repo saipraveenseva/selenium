@@ -1,0 +1,223 @@
+SELENIUM topics
+
+Selenium features
+
+Selenium webdriver architecture
+
+Locator techniques and tools used to identify objects
+Advanced locator identication
+
+Techniques to automate web elements
+Static dropdowns
+dropdown looping
+Dynamic dropdowns
+Auto suggestive dropdowns
+calendar UI
+edit boxes
+error validations
+java alerts
+
+Synchronization
+Implicit wait
+Explicit wait
+Fluent wait
+
+Automate ajax
+Handling ajax/mouse interaction
+Actions class
+Window handle
+child windows
+Handling frames
+frames techniques
+
+Real time scenarios
+Open the links in separate tabs
+Getting titles of child tabs
+Handling calendar UI in ecommerece website
+
+Perform scrolling
+Handling table grids
+Parsing string
+
+Java streams
+Automate sort
+Pagination
+Filetering the web table using selenium java streams
+
+Selenium 4.0 features
+Relatiove locations
+Invoking multiple tabs
+Taking webelement partial screenshot
+capturing height and width of webelement
+
+Running testcases in testing
+Importance of xml file in testing configuration
+prioritising the testcases with testing
+include and exclude mechanism to control testcases
+Executing testcases at package level with regex
+testing annotation
+usage of groups functionality in testing
+helper attributes
+listeners interface in testing framework
+running tests in parallel and generating reports
+
+Design pattern
+Page object model
+Implementing action methods for page factory web elements
+Creating abstract components
+speedup test execution
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.  What is Interface in Java?
+        An interface is a group of related methods with empty bodies.
+        Its class responsibility to implement the methods declared in the Interface
+        When class agreed to implement the interface, they must need to provide implementation/bodies to all the defined methods in Interface
+
+    In simple terms, Interface enforces the Contract to class to follow.
+
+  2. WebDriver is an Interface which provides Set of Browser Automation methods with empty bodies (Abstract methods)
+
+      Classes like ChromeDriver, FirefoxDriver, MicrosoftEdgeDriver , SafariDriver etc implement the WebDriver Interface
+      and provide their own implementation to the WebDriver methods
+
+   3. We need to create the object of the class to access the methods present in the class.
+
+      ChromeDriver driver = new ChromeDriver ();
+      driver object here has access to all the methods of Chrome driver
+
+      WebDriver driver = new ChromeDriver ();
+      driver object here has access to the methods of Chrome driver which are defined in web Driver Interface
+
+
+
+
+
+
+
+
+
+
+
+
+
+Selenium Web Driver Locators
+
+•	As part of Automation, Selenium Performs actions (such as click, typing) on the Page HTML Elements.
+
+•	The Locators are the way to identify an HTML element on a web page.
+Selenium WebDriver uses any of the below locators to identify the element on the page and performs the Action
+
+
+ID
+Xpath
+CSS Selector
+name
+Class Name
+Tag Name
+Link Text
+Partial Link Text
+
+
+<input type="text" placeholder="Username" id= “inputUsername”  value=" ">
+
+
+
+
+Input -> tag name
+Red-> attribute
+Green-> attribute associated value.
+
+
+
+
+
+Css Selector-
+
+•	Class name -> tagname.classname ->  Button.signInBtn -> .error
+
+•	Id -> tagname#id      ->   input#inputUsername
+
+•	Tagname[attribute=’value’]
+
+<input type="text" placeholder="Username” value=" ">
+
+Input [placeholder=’ Username’]
+
+•	//Tagname[@attribute=’value’]:nth-child(index). -  Child items
+•	Parenttagname childtagname
+•	input[type*='pass'] – CSS
+•	tagname
+
+
+
+
+Xpath –
+
+•	//Tagname[@attribute=’value’]
+//input[@placeholder=’ Username’’]
+
+<input type="text" placeholder="Name">
+//input[@placeholder=’ Name’]
+
+•	//Tagname[@attribute=’value’][index]
+•	//parentTagname/childTagname
+•	//button[contains(@class,'submit')].  – Regular expression
+•	//tagname
+•	//header/div/button[1]/following-sibling::button[1]
+•	//header/div/button[1]/parent::div
+
+
+
+
+
+
+
+
+Interview Question -
+
+Core Java Basics needed to Get started with Automation –
+
+•	Variables & Data types in Java
+•	Working with Arrays
+•	Loops & Conditions
+•	Strings and its functions
+•	Importance of Array Lists
+•	Array list operations and conversion of Array to List
+•	Declaring Methods
+•	Accessing Methods in class & Static keyword
+
+
+
+
+
+
+
+
+
+Note: Rest all topics are present in the last 2 sections of this course.
+
+
