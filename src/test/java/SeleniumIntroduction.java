@@ -122,17 +122,43 @@ public class SeleniumIntroduction{
 
         System.out.println(chromeDriver.findElement(By.cssSelector("form p")).getText());
 
-        // Now we got the password lets login.
+        // Now we got the password lets  go back to login page using "go to login button
+        /*
+                <div class="forgot-pwd-btn-conainer">
+                    <button class="go-to-login-btn">Go to Login</button>
+                    <button class="reset-pwd-btn">Reset Login</button>
+                </div>
+
+                Here we need to use parent child tagging along with indexes. div is the parent, both the buttons are children
+         */
+
+        chromeDriver.findElement(By.xpath("//div[@class='forgot-pwd-btn-conainer']/button[1]")).click(); // tapping on one button
+        // the above line will change the page so we need to Thread.sleep(3000); as the page transitions to avoid misclicks
+
+        Thread.sleep(3000);
+
+        // Now we are on login page
         // lets use css selector and regex instead of By id
         /*
             <input type="text" placeholder="Username" id="inputUsername" value="">
             <input type="password" placeholder="Password" name="inputPassword" value="">
             <input type="checkbox" id="chkboxOne" name="chkboxOne" value="rmbrUsername">
-
+            <button class="submit signInBtn" type="submit">Sign In</button>
          */
                                     // we can write as "input#inputUsername" as well
-        chromeDriver.findElement(By.cssSelector("#inputUsername")).sendKeys("Sai praveen Seva");
-        chromeDriver.findElement()
+        chromeDriver.findElement(By.cssSelector("#inputUsername")).sendKeys("Sai");
+        chromeDriver.findElement(By.cssSelector("input[type*='pass']")).sendKeys("rahulshettyacademy");
+                                                // We used css regex here * indicates words starting with pass
+        //chromeDriver.findElement(By.xpath("//input[contains(@type, 'pass')]")).sendKeys("rahulshettyacademy");
+                                                // We used xpath regex here
+        chromeDriver.findElement(By.id("chkboxOne")).click();
+                                            // used conventional id instead of xpath or css
+        chromeDriver.findElement(By.xpath("//button[contains(@class,'submit')]")).click();
+                                            // // We used xpath classname here
+        // username, password, checkbox and sign are done
+
+
+
 
 
 

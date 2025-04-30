@@ -158,24 +158,30 @@ Green-> attribute associated value.
 Css Selector-
 
 •	Class name -> tagname.classname ->  Button.signInBtn -> .error
+<input type="text" class="form-control username-input" placeholder="Username" id="inputUsername" value=" ">
 
 •	Id -> tagname#id      ->   input#inputUsername
+<input type="text" id="username" placeholder="Enter your username">
 
 •	Tagname[attribute=’value’]
-
 <input type="text" placeholder="Username” value=" ">
 
 Input [placeholder=’ Username’]
 
-•	//Tagname[@attribute=’value’]:nth-child(index). -  Child items
 •	Parenttagname childtagname
-•	input[type*='pass'] – CSS
+•	input[type*='pass'] –Regex in CSS
 •	tagname
 
 
 
 
 Xpath –
+
+//input[@id='inputUsername'] -- id
+//input[contains(@class, 'form-control')]  -- class
+//input[contains(@class, 'username-input')] -- class
+//input --tagname
+
 
 •	//Tagname[@attribute=’value’]
 //input[@placeholder=’ Username’’]
