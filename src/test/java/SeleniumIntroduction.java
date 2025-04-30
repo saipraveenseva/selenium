@@ -69,7 +69,6 @@ public class SeleniumIntroduction{
 
         /*
 
-
             - **`Thread.sleep(ms)`**:
               ➤ Pauses execution for a fixed time **regardless** of whether the element is ready or not.
               ➤ It's a **hard wait**. Always waits the full time.
@@ -77,7 +76,6 @@ public class SeleniumIntroduction{
             - **`Implicit Wait`**:
               ➤ Tells WebDriver to **poll the DOM** for a set time when trying to find elements.
               ➤ It's a **dynamic wait**. Proceeds as soon as the element is found.
-
 
          */
 
@@ -98,7 +96,49 @@ public class SeleniumIntroduction{
 
         chromeDriver.findElement(By.cssSelector(".reset-pwd-btn")).click();
 
+        /*
+
+        <form action="#">
+            <h2>Forgot password</h2>
+            <p class="infoMsg">Please use temporary password 'rahulshettyacademy' to Login. </p>
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Phone Number">
+            <br>
+            <div class="forgot-pwd-btn-conainer"><button class="go-to-login-btn">Go to Login</button><button class="reset-pwd-btn">Reset Login</button></div>
+         </form>
+
+         Let's see parent child tag traverse techniques. In the above form element form is the parent
+         h2, p, inputs tagnames are children
+
+         ** All inputs here are text and not unique so we use indexes here which are not important.
+         For time being we just wish to locate this text "Please use temporary password 'rahulshettyacademy' to Login."
+         It belongs to "p" tagname. To locate that:
+
+         By.cssSelector("form p")
+         By.xpath("//form/p")
+
+         */
+
         System.out.println(chromeDriver.findElement(By.cssSelector("form p")).getText());
+
+        // Now we got the password lets login.
+        // lets use css selector and regex instead of By id
+        /*
+            <input type="text" placeholder="Username" id="inputUsername" value="">
+            <input type="password" placeholder="Password" name="inputPassword" value="">
+            <input type="checkbox" id="chkboxOne" name="chkboxOne" value="rmbrUsername">
+
+         */
+                                    // we can write as "input#inputUsername" as well
+        chromeDriver.findElement(By.cssSelector("#inputUsername")).sendKeys("Sai praveen Seva");
+        chromeDriver.findElement()
+
+
+
+
+
+
 
 
 
