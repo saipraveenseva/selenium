@@ -1,0 +1,71 @@
+Selenium interview questions
+
+Element click intercepted exception?
+will encounter this exception when we are trying to click an element but we are unable to do it because some overlay or popup is obstructing the element we wanna click
+How do we resolve this? using javascript executor and webdriver waits
+
+100 testcases created by manual team. Whats ur approach to automate them?
+Do a feasibility study on the testcases first
+prioritise the testcases and chose them as per the priority
+Develop the feature files, write stepdefinitions and the process goes on.
+
+Trying to perform a click on an element and its not happening, what could be the reason and a way to resolve?
+javascript executor, we can click that element
+
+A data is entered into a form and an success message will display with a delay. The delay is not consistent. How would u wait for the message to appear?
+Use the webdriver wait, explicit wait waits for the condition until it appears. what if it doesn't work?
+
+How would you estimate the ETA to automate this above testcase now that it has this inconsistent delay?
+Estimation includes
+How many fields are there to take input? Is pagination involved?
+having keywords ready
+have locators ready
+Is the POM design pattern ready getters setters ready
+Can we reuse those methods? if not i have to write my own.
+time to understand the feature
+write the code, perform unit test, get approvals, get feedback and then only my output will be merged into main branch
+
+What is Jenkins?
+
+There is dedicated devops team to write the code in jenkins. we just execute scripts.
+
+How often do you trigger smoke or regression testing pipeline?
+Trigger the smoke when we get the build
+Trigger the regression when we get the release
+
+What are the diff locators you use in your framework?
+
+Faster locators?
+ID is faster it can identify any unique element
+
+
+Use of mvn clean command?
+clean the older artifacts, logs and run a clean execution
+
+whats is pom.xml
+manage dependecies and plugins required for the framework
+
+How will you find the broken links in the webpage
+Get all <a> tags
+Extract the href attribute
+Send an http request to verify link status.
+If the responsecode >=400, the link is broken
+
+Usage of inheritance in your framework
+Base class has this webdriver declared
+extend the base class and use the webdriver object in the child classes.
+
+What is testng?
+Helps us to run the tests
+prioritise the tests
+
+YOu were running the tests in staging env URL and asked to run in the testing env URL. How would u do it?
+Change the url to testing env URL in the config.properties file
+declaring this property in config.properties file allows us to run the tests in said env, instead of changing the URL in multiple files.
+common code.
+
+
+
+
+
+
