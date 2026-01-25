@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-public class Dropdowns {
+public class TwoDropdowns {
 
     public static void main(String[] args) throws InterruptedException {
         WebDriver chromeDriver = new ChromeDriver();
